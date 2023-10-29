@@ -6,7 +6,7 @@ type Menu = { id: MenuIds; title: string };
 
 // Додати тип Menu Selected
 
-type SelectedMenu = { id?: MenuIds };
+type SelectedMenu = { id: MenuIds };
 
 type MenuSelected = {
   selectedMenu: SelectedMenu;
@@ -17,7 +17,7 @@ type MenuAction = {
 };
 
 const MenuSelectedContext = createContext<MenuSelected>({
-  selectedMenu: {},
+  selectedMenu: {id: 'first'},
 });
 
 // Додайте тип MenuAction
